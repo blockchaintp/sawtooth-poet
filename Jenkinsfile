@@ -106,14 +106,14 @@ pipeline {
             steps {
                 sh 'INSTALL_TYPE="" ./bin/run_tests -i deployment'
             }
-        }*/
+        }
 
         stage('Compile coverage report') {
             steps {
                 sh 'docker run --rm -v $(pwd):/project/sawtooth-poet sawtooth-poet-tests:$ISOLATION_ID /bin/bash -c "cd coverage && coverage combine && coverage html -d html"'
             }
         }
-
+*/
         stage('Create git archive') {
             steps {
                 sh '''
