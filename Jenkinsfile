@@ -132,12 +132,13 @@ pipeline {
             }
         }
 
-        stage('Archive Build artifacts') {
+/*        stage('Archive Build artifacts') {
             steps {
                 sh 'docker-compose -f ci/copy-debs.yaml up'
                 sh 'docker-compose -f ci/copy-debs.yaml down'
             }
         }
+*/
     }
 
     post {
