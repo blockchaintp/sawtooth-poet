@@ -102,11 +102,11 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
+/*        stage('Run Tests') {
             steps {
                 sh 'INSTALL_TYPE="" ./bin/run_tests -i deployment'
             }
-        }
+        }*/
 
         stage('Compile coverage report') {
             steps {
